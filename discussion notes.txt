@@ -1,4 +1,10 @@
+trainer profile
+================
+https://www.linkedin.com/in/rajeevguptajavatrainer/
+
+
 sw required
+===============
 jdk 17
 maven
 https://maven.apache.org/download.cgi
@@ -9,21 +15,22 @@ mysql
 https://dev.mysql.com/downloads/mysql/
 
 sw req:
-------------
+==========
 jdk 17+ maven + intellij/sts + mysql + laptop 8gb/16gb + ssd
 
 
 code :
+=========
 https://github.com/rgupta00/edu_april_may_23
 
 ppt pdf and other stuff:
 
 youtube
+=======
 https://www.youtube.com/@busycoderacademy
 
 course plan:
-------------
-
+===========
 8 session 3X8=24hr
 
 Session wise plan:
@@ -38,6 +45,19 @@ Session 7: Introduction to microservice / interview prepration
 
 
 
+
+
+
+ <bean id="car" class="com.demo.Car">
+        <property name="carName" value="tata "/>
+        <property name="tyre" ref="tyre2"/>
+    </bean>
+
+    <bean id="tyre1" class="com.demo.CeatTyre"/>
+    <bean id="tyre2" class="com.demo.MrfTyre"/>
+    
+    
+    
 
 
       
