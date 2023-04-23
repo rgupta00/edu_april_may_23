@@ -1,0 +1,3 @@
+INFO  | 2023-04-23 23:22:38 | [main] config.Main (Main.java:10) - it is a hello world log message
+INFO  | 2023-04-23 23:28:06 | [main] service.AccountServiceImpl (AccountServiceImpl.java:31) - transfer method is started
+INFO  | 2023-04-23 23:28:06 | [main] service.AccountServiceImpl (AccountServiceImpl.java:44) - transfer method is finished 0

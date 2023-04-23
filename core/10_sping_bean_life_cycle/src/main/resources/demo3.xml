@@ -6,12 +6,16 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
 
 		<context:annotation-config/>
-		<context:component-scan base-package="com.demo2"/>
+		<context:component-scan base-package="com.demo3"/>
 
-		<bean id="foo" class="com.demo2.Foo">
-			<property name="message" value="foo message"/>
-		</bean>
+	<bean id="acc" class="com.demo3.Account">
+		<property name="id" value="${account.id}"/>
+		<property name="name" value="${account.name}"/>
+		<property name="balance" value="${account.balance}"/>
+	</bean>
 
-		<bean class="com.demo2.MyBeanPostProcessorOne"/>
-		<bean class="com.demo2.MyBeanFPP"/>
+	<!--<bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+		<property name="location" value="classpath:acc.properties"/>
+	</bean>-->
+	<context:property-placeholder location="classpath:acc.properties"/>
 </beans>

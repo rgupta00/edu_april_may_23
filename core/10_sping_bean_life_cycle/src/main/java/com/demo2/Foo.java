@@ -1,13 +1,11 @@
-package com.demo1;
+package com.demo2;
 
 import org.springframework.beans.factory.BeanNameAware;
-import org.springframework.beans.factory.DisposableBean;
-import org.springframework.beans.factory.InitializingBean;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Foo implements BeanNameAware {
+public class Foo {
 
 	private String message;
 
@@ -35,11 +33,7 @@ public class Foo implements BeanNameAware {
 		System.out.println("value of message is :"+ message);
 	}
 
-	@Override
-	public void setBeanName(String name) {
-		//log4j2
-		System.out.println("setBeanName(String name) is called :"+ name);
-	}
+
 }
 
 

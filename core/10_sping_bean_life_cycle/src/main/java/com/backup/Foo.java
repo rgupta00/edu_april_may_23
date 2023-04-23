@@ -1,13 +1,12 @@
-package com.demo1;
+package com.backup;
 
-import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.PreDestroy;
 
-public class Foo implements BeanNameAware {
+public class Foo implements InitializingBean, DisposableBean {
 
 	private String message;
 
@@ -18,6 +17,7 @@ public class Foo implements BeanNameAware {
 	@PostConstruct
 	public void myInitMethodUsingAnnotation(){
 		System.out.println("myInitMethod using annotation @PostConstuct..");
+		//return  "hello to all champs";
 	}
 
 	@PreDestroy
@@ -26,6 +26,15 @@ public class Foo implements BeanNameAware {
 		//return  "hello to all champs";
 	}
 
+	//call back
+	public void myInitMethod(){
+		System.out.println("myInitMethod using xml..");
+		//return  "hello to all champs";
+	}
+
+	public void myDestoryMethod(){
+		System.out.println("myDestoryMethod using xml");
+	}
 	public void setMessage(String message) {
 		System.out.println("setMessage is called");
 		this.message = message;
@@ -36,9 +45,13 @@ public class Foo implements BeanNameAware {
 	}
 
 	@Override
-	public void setBeanName(String name) {
-		//log4j2
-		System.out.println("setBeanName(String name) is called :"+ name);
+	public void destroy() throws Exception {
+		System.out.println("destroy using DisposableBean");
+	}
+
+	@Override
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("afterPropertiesSet using InitializingBean");
 	}
 }
 
