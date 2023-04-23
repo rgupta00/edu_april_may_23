@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+	<bean id="bank" class="com.demo.Bank">
+		<property name="bankName" value="SBI Delhi"/>
+		<property name="accounts">
+			<list>
+				<ref bean="acc1"/>
+				<ref bean="acc2"/>
+				<ref bean="acc3"/>
+			</list>
+		</property>
+		<property name="branches">
+			<map>
+				<entry key="b1" value-ref="b1"/>
+				<entry key="b2" value-ref="b2"/>
+			</map>
+		</property>
+		<property name="branchManagers">
+			<props>
+				<prop key="ITO">Mr Arun</prop>
+				<prop key="Krishna Nagar">Mr Sumit</prop>
+			</props>
+		</property>
+	</bean>
+
+
+	<bean id="acc1" class="com.demo.Account">
+		<property name="id" value="33"/>
+		<property name="name" value="sumit"/>
+		<property name="balance" value="5000"/>
+	</bean>
+	
+	<bean id="acc2" class="com.demo.Account">
+		<property name="id" value="3"/>
+		<property name="name" value="rajat"/>
+		<property name="balance" value="9000"/>
+	</bean>
+	
+	
+	<bean id="acc3" class="com.demo.Account">
+		<property name="id" value="330"/>
+		<property name="name" value="ekta"/>
+		<property name="balance" value="50000"/>
+	</bean>
+
+	<bean id="b2" class="com.demo.BranchLocation">
+		<property name="address" value="ITO"/>
+		<property name="city" value="Delhi"/>
+	</bean>
+
+	<bean id="b1" class="com.demo.BranchLocation">
+		<property name="address" value="krishna nagar"/>
+		<property name="city" value="Delhi"/>
+	</bean>
+</beans>
