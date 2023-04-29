@@ -1,0 +1,189 @@
+Assignment: ProductStore application
+===================================
+step by step: MVC design pattern
+===================================
+
+Step 1: create the project structure
+
+step 2: dto
+------------
+Product
+
+	private Integer id;
+	private String name;
+	private BigDecimal price;
+
+step 2: dao layer and spring jdbc implementaion
+------------
+ProductDao
+
+	public List<Product> getAll();
+	public Product getById(Integer id );
+	public Product addProduct(Product product);
+	public Product deleteProduct(Integer id );
+	public Product updateProduct(Integer id, Product product );
+
+
+step 3: implement dao layer with spring jdbc implementaion
+------------
+
+
+step 4: write serice layer contract
+-----------------------------------
+
+ProductService
+
+	public List<Product> getAll();
+	public Product getById(Integer id );
+	public Product addProduct(Product product);
+	public Product deleteProduct(Integer id );
+	public Product updateProduct(Integer id, Product product );
+
+
+
+step 5: write serice layer and put @Transctional annotation
+-----------------------------------
+
+
+step 6:Manage logging using Spring AOP and calculate how time take to execute getAllProduct method
+
+
+step 7:get reporting of all exception using of app using AOP (@ThrowsAdvice)
+
+
+-----------------------------------
+
+-----------------------------------
+
+
+
+
+some imp cheet sheet:
+---------------------------
+jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/productapp?useSSL=false
+jdbc.username=root
+jdbc.password=root
+
+
+how to create table:
+-----------------------
+create table product_table
+(
+	id int not null primary key auto_increment,
+	name varchar(80) not null,
+	price DECIMAL(10,2) not null
+);
+
+insert into product_table(name, price) values('laptop',56777);
+
+
+
+ <context:annotation-config/>
+    <context:component-scan base-package="com.bankapp"/>
+    <!-- i need to define beans realted to db infra stru bean-->
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="datasource"/>
+    </bean>
+
+    <bean id="datasource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="url" value="${jdbc.url}"/>
+        <property name="driverClassName" value="${jdbc.driverName}"/>
+        <property name="username" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+    </bean>
+    <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location" value="classpath:db.properties"/>
+    </bean>
+    <bean id="txMgr" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="datasource"/>
+    </bean>
+    <!--hey spring i want to go for declartive tx mgt -->
+    <tx:annotation-driven transaction-manager="txMgr"/>
+    <aop:aspectj-autoproxy/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+backup:
+------------
+
+@Repository
+public class ProductDaoMapImpl implements ProductDao{
+
+	private HashMap<Integer, Product> productsMap;
+	private int counter=0;
+	public ProductDaoMapImpl() {
+		productsMap=new HashMap<Integer, Product>();
+		productsMap.put(1, new Product(1, "desktop", new BigDecimal(55000)));
+		productsMap.put(2, new Product(2, "Mouse pad", new BigDecimal(550)));
+		productsMap.put(3, new Product(3, "Torch", new BigDecimal(520)));
+		counter=3;
+
+
+	}
+
+	@Override
+	public List<Product> getAll() {
+		System.out.println("-------hashmap-------");
+		return new ArrayList<Product>(productsMap.values());
+	}
+
+	@Override
+	public Product getById(Integer id) {
+		return productsMap.get(id);
+	}
+
+	@Override
+	public Product addProduct(Product product) {
+		++counter;
+		product.setId(counter);
+		productsMap.put(counter,product );
+		return product;
+	}
+
+	@Override
+	public Product deleteProduct(Integer id) {
+		Product productToDelete=null;
+		if(productsMap.containsKey(id)) {
+			productToDelete=productsMap.get(id);
+			productsMap.remove(id);
+		}
+		return productToDelete;
+	}
+
+	@Override
+	public Product updateProduct(Integer id, Product product) {
+		Product productToUpdate=null;
+		if(productsMap.containsKey(id)) {
+			productToUpdate=productsMap.get(id);
+			productToUpdate.setPrice(product.getPrice());
+			productToUpdate.setAvailable(product.isAvailable());
+			productsMap.put(id, productToUpdate);
+		}
+		return productToUpdate;
+	}
+
+}
