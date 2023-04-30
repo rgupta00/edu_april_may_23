@@ -1,0 +1,106 @@
+INFO  | 2023-04-23 23:22:38 | [main] config.Main (Main.java:10) - it is a hello world log message
+INFO  | 2023-04-23 23:28:06 | [main] service.AccountServiceImpl (AccountServiceImpl.java:31) - transfer method is started
+INFO  | 2023-04-23 23:28:06 | [main] service.AccountServiceImpl (AccountServiceImpl.java:44) - transfer method is finished 0
+INFO  | 2023-04-29 21:29:15 | [main] service.AccountServiceImpl (AccountServiceImpl.java:31) - transfer method is started
+INFO  | 2023-04-29 21:29:15 | [main] service.AccountServiceImpl (AccountServiceImpl.java:44) - transfer method is finished 0
+INFO  | 2023-04-29 21:30:00 | [main] service.AccountServiceImpl (AccountServiceImpl.java:31) - transfer method is started
+INFO  | 2023-04-29 21:30:02 | [main] service.AccountServiceImpl (AccountServiceImpl.java:44) - transfer method is finished 2001
+INFO  | 2023-04-29 21:36:28 | [main] util.LoggingAspect (LoggingAspect.java:19) - transfer method is started
+INFO  | 2023-04-29 21:36:30 | [main] util.LoggingAspect (LoggingAspect.java:26) - transfer method is finished 2000
+INFO  | 2023-04-29 21:38:09 | [main] util.LoggingAspect (LoggingAspect.java:20) - transfer method is started
+INFO  | 2023-04-29 21:38:11 | [main] util.LoggingAspect (LoggingAspect.java:27) - transfer method is finished 2000
+WARN  | 2023-04-29 21:38:41 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountDaoImplJdbc' defined in file [/home/raj/Documents/edu_april_may_23/core/15_bankapp_with_db_aop/target/classes/com/bankapp/model/dao/impl/AccountDaoImplJdbc.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'datasource' defined in class path resource [bank.xml]: Pointcut is not well-formed: expecting ')' at character position 16
+executon(public void transfer(..))
+                ^^^^
+
+INFO  | 2023-04-29 21:43:22 | [main] util.LoggingAspect (LoggingAspect.java:22) - transfer method is started
+INFO  | 2023-04-29 21:43:24 | [main] util.LoggingAspect (LoggingAspect.java:29) - transfer method is finished 2001
+WARN  | 2023-04-29 21:43:35 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountDaoImplJdbc' defined in file [/home/raj/Documents/edu_april_may_23/core/15_bankapp_with_db_aop/target/classes/com/bankapp/model/dao/impl/AccountDaoImplJdbc.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'datasource' defined in class path resource [bank.xml]: Pointcut is not well-formed: expecting 'name pattern' at character position 66
+execution(  com.bankapp.model.service.AccountServiceImpl.transfer(..))
+                                                                  ^
+
+INFO  | 2023-04-29 21:46:08 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:46:08 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:46:08 | [main] util.LoggingAspect (LoggingAspect.java:23) - getById method is started
+INFO  | 2023-04-29 21:46:09 | [main] util.LoggingAspect (LoggingAspect.java:30) - getById method is finished 1001
+INFO  | 2023-04-29 21:46:09 | [main] util.LoggingAspect (LoggingAspect.java:23) - transfer method is started
+INFO  | 2023-04-29 21:46:11 | [main] util.LoggingAspect (LoggingAspect.java:30) - transfer method is finished 2000
+INFO  | 2023-04-29 21:46:11 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:46:11 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:46:45 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:46:45 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:46:48 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:46:48 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:48:08 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:48:08 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:48:08 | [main] util.LoggingAspect (LoggingAspect.java:23) - getById method is started
+INFO  | 2023-04-29 21:48:09 | [main] util.LoggingAspect (LoggingAspect.java:30) - getById method is finished 1000
+INFO  | 2023-04-29 21:48:09 | [main] util.LoggingAspect (LoggingAspect.java:23) - transfer method is started
+INFO  | 2023-04-29 21:48:11 | [main] util.LoggingAspect (LoggingAspect.java:30) - transfer method is finished 2000
+INFO  | 2023-04-29 21:48:11 | [main] util.LoggingAspect (LoggingAspect.java:23) - getAll method is started
+INFO  | 2023-04-29 21:48:11 | [main] util.LoggingAspect (LoggingAspect.java:30) - getAll method is finished 0
+INFO  | 2023-04-29 21:49:35 | [main] util.LoggingAspect (LoggingAspect.java:28) - getAll method is started
+INFO  | 2023-04-29 21:49:35 | [main] util.LoggingAspect (LoggingAspect.java:35) - getAll method is finished 0
+INFO  | 2023-04-29 21:49:35 | [main] util.LoggingAspect (LoggingAspect.java:28) - getById method is started
+INFO  | 2023-04-29 21:49:36 | [main] util.LoggingAspect (LoggingAspect.java:35) - getById method is finished 1000
+INFO  | 2023-04-29 21:49:36 | [main] util.LoggingAspect (LoggingAspect.java:28) - transfer method is started
+INFO  | 2023-04-29 21:49:38 | [main] util.LoggingAspect (LoggingAspect.java:35) - transfer method is finished 2000
+INFO  | 2023-04-29 21:49:38 | [main] util.LoggingAspect (LoggingAspect.java:28) - getAll method is started
+INFO  | 2023-04-29 21:49:38 | [main] util.LoggingAspect (LoggingAspect.java:35) - getAll method is finished 0
+WARN  | 2023-04-29 21:52:13 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountDaoImplJdbc' defined in file [/home/raj/Documents/edu_april_may_23/core/15_bankapp_with_db_aop/target/classes/com/bankapp/model/dao/impl/AccountDaoImplJdbc.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'datasource' defined in class path resource [bank.xml]: Pointcut is not well-formed: expecting 'pointcut name' at character position 1
+@annoation(MyAppLogging)
+ ^^^^^^^^^
+
+WARN  | 2023-04-29 21:52:33 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountDaoImplJdbc' defined in file [/home/raj/Documents/edu_april_may_23/core/15_bankapp_with_db_aop/target/classes/com/bankapp/model/dao/impl/AccountDaoImplJdbc.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'datasource' defined in class path resource [bank.xml]: Pointcut is not well-formed: expecting 'pointcut name' at character position 1
+@annoation(MyAppLogging.class)
+ ^^^^^^^^^
+
+INFO  | 2023-04-29 21:54:36 | [main] util.LoggingAspect (LoggingAspect.java:30) - transfer method is started
+INFO  | 2023-04-29 21:54:38 | [main] util.LoggingAspect (LoggingAspect.java:37) - transfer method is finished 2000
+INFO  | 2023-04-29 22:49:35 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-29 22:49:35 | [main] util.LoggingAspect (LoggingAspect.java:38) - transfer method is finished 35
+INFO  | 2023-04-29 22:53:24 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-29 22:55:13 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-30 21:50:53 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 21:50:53 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 21:50:53 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 21:50:54 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 21:52:30 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 21:52:30 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 21:52:30 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 21:52:31 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 21:52:31 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-30 21:52:56 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 21:52:56 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 21:52:56 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 21:52:57 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 21:52:57 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-30 21:53:26 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 21:53:26 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 21:53:26 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 21:53:27 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 21:53:28 | [main] util.LoggingAspect (LoggingAspect.java:31) - transfer method is started
+INFO  | 2023-04-30 21:53:28 | [main] util.LoggingAspect (LoggingAspect.java:38) - transfer method is finished 15
+INFO  | 2023-04-30 21:54:48 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 21:54:48 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 21:54:48 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 21:54:49 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+WARN  | 2023-04-30 22:29:47 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'accountDaoImplHib' defined in file [/home/raj/Documents/edu_april_may_23/core/19_bankapp_hib_java_config/target/classes/com/bankapp/model/dao/impl/AccountDaoImplHib.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'org.hibernate.SessionFactory' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+INFO  | 2023-04-30 22:30:11 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 22:30:11 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 22:30:11 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 22:30:12 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 22:32:20 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+INFO  | 2023-04-30 22:32:20 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+WARN  | 2023-04-30 22:32:20 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:73) - HHH90000026: MySQL57Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+INFO  | 2023-04-30 22:32:21 | [main] internal.JtaPlatformInitiator (JtaPlatformInitiator.java:51) - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+INFO  | 2023-04-30 23:24:36 | [main] config.RepositoryConfigurationDelegate (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  | 2023-04-30 23:24:36 | [main] config.RepositoryConfigurationDelegate (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interfaces.
+INFO  | 2023-04-30 23:26:25 | [main] config.RepositoryConfigurationDelegate (RepositoryConfigurationDelegate.java:132) - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+INFO  | 2023-04-30 23:26:25 | [main] config.RepositoryConfigurationDelegate (RepositoryConfigurationDelegate.java:201) - Finished Spring Data repository scanning in 56 ms. Found 1 JPA repository interfaces.
+INFO  | 2023-04-30 23:26:26 | [main] util.LogHelper (LogHelper.java:31) - HHH000204: Processing PersistenceUnitInfo [name: default]
+INFO  | 2023-04-30 23:26:26 | [main] hibernate.Version (Version.java:44) - HHH000412: Hibernate ORM core version 6.1.5.Final
+WARN  | 2023-04-30 23:26:26 | [main] internal.MetadataBuilderImpl$MetadataBuildingOptionsImpl (MetadataBuilderImpl.java:626) - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+INFO  | 2023-04-30 23:26:26 | [main] java.JavaReflectionManager (JavaReflectionManager.java:49) - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+INFO  | 2023-04-30 23:26:26 | [main] internal.DialectFactoryImpl (DialectFactoryImpl.java:66) - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+WARN  | 2023-04-30 23:26:26 | [main] support.AbstractApplicationContext (AbstractApplicationContext.java:592) - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'localContainerEntityManagerFactoryBean' defined in com.bankapp.config.AppConfig: 'java.lang.reflect.Type org.hibernate.annotations.common.reflection.ReflectionManager.toType(org.hibernate.annotations.common.reflection.XClass)'
