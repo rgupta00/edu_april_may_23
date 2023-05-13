@@ -1,0 +1,318 @@
+
+Getting started with spring boot
+-------------------------------
+
+
+	Advantage of spring boot , configuration spring boot
+	~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 	
+	=> Auto-Configuration BB + ISB		No XML=> Java config
+
+	=> Dependency Management
+
+	=> Externalized Configuration
+		bean can be configured through application.properties file 
+		without touching java or xml config
+
+	=> Production support
+		We get health checking, application and jvm metrics, 
+		jmx via http and a few more things for free
+		
+	=> Spring boot actuator
+	
+	=> Openioted Framework
+	
+	=> embedded tomcat
+	
+	=> cloud native support 
+	
+	=> Runnable Jars
+		 We can package your application as a runnable jar with embedded tomcat
+		 included so it presents a self-contained deployment unit
+
+	=> Microservice
+
+
+Hello world rest end points?
+----------------------------
+
+@RestController
+public class HelloController {
+
+    //Pathvaraible and request param
+    @GetMapping(path = "hello/{name}/{city}")
+    public String hello(@PathVariable(name = "name")String username,@PathVariable(name = "city")String city){
+        return "hello you .."+ username+ " city name: "+ city;
+    }
+    //hello2?name=raja&city=noida       => pagination
+    @GetMapping(path = "hello2")
+    public String hello2(@RequestParam(name = "name")String name, @RequestParam(name = "city")String city){
+        return "hello you .."+ name+ " city name: "+ city;
+    }
+}
+
+
+
+How to change server port?
+-----------------------------
+server.port=8090
+
+
+what about @SpringBootApplication"
+------------------------
+@SpringBootApplication=@SpringBootConfiguration + @EnableAutoConfiguration + @ComponentScan
+
+bannner banner?
+---------------------
+spring.banner.location=classpath:banner.txt
+https://devops.datenkollektiv.de/banner.txt/index.html
+
+
+How to run spring boot jar file?
+---------------------------
+java -jar  jpa_demo2-0.0.1-SNAPSHOT.jar --server.port=8050
+
+Printing list of autoconfigured bean?
+------------------------------------
+
+
+Understanding autoconfiguration of the beans?
+---------------------------------------
+
+Understanding spring boot profile?
+-------------------------------------
+
+
+Reading property files?
+----------------------------
+@Value @Enviornment @ConfigurationProperties
+
+
+
+
+Configuring datasource beans with spring boot?
+-------------------------------------------
+
+
+spring.datasource.url=jdbc:mysql://localhost:3306/demoms?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=root
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+
+
+disable all database related auto configuration in spring-boot?
+-------------------------------------------------------
+
+
+
+
+Creating productstore curd rest application using jdbcTemplate?
+----------------------------------------------------
+
+private int id;
+private String name;
+private BigDecimal price;
+private LocalDate mfgDate;
+private String category;
+	
+	
+
+
+public interface ProductDao {
+	public List<Product> getAll();
+	public void addProduct(Product product);
+	public void updateProduct(int productId, Product product);
+	public Product getById(int productId);
+	public void deleteProduct(int productId);
+}
+
+
+
+
+products.add(new Product(1, "TV", new BigDecimal(78000),
+				LocalDate.of(2021, Month.APRIL, 12),
+				"Electronics"));
+		products.add(new Product(2, "Laptop", new BigDecimal(78000)
+				,LocalDate.of(2021, Month.APRIL, 12),
+				"Electronics"));
+		products.add(new Product(3,"Pen set", new BigDecimal(780),
+				LocalDate.of(2022, Month.APRIL, 12),"Stationery"));
+
+
+
+
+done
+
+
+
+Creating productstore curd rest application using using our own jdbcTemplate?
+----------------------------------------------------
+done
+
+Q can we more then one db in spring boot and and dynamic swap it ?
+------------------------------------------------------------------
+@Conditional annotaition
+
+1. define 2 ds -> one for test_db
+		one for prod_db
+		
+
+
+Creating productstore curd rest application using JPARepository?
+----------------------------------------------------
+
+
+Spring boot handing httpstatus code? ResponseEntity
+-------------------------------------
+
+
+rest controller exception handling?
+------------------------------------
+
+
+JSR 303 validateion api , exception handling?
+------------------------------------------------
+
+
+
+
+Spring boot Validation?
+------------------------
+
+ValidationMessages.properties
+-----------------------------
+
+product.name.absent=Please provide product name
+product.name.invalid=product Name should contain only alphabets and space
+
+product.price.absent=Please provide product price 
+account.price.invalid=Please provide correct price bw 100 to 100000
+
+
+Other validation example:
+-------------------------
+
+@Email(message = "{account.email.invalid}")
+@NotNull(message = "{account.email.absent}")
+private String email;
+	
+@NotNull(message = "{account.phone.absent}")
+@Pattern(regexp = "[789][0-9]{9}", message = "{account.phone.invalid}")
+private String phone;
+
+
+
+	private String category;
+	
+		EL BOOKS FMCG
+
+
+
+Spring boot custom valiation logic?
+---------------------------------------		
+
+
+setp 1: create ProductTypeValidator need to be used by custom annotation
+
+public class ProductTypeValidator implements ConstraintValidator<ValidateProductType, String> {
+    @Override
+    public boolean isValid(String productType, ConstraintValidatorContext constraintValidatorContext) {
+        List<String> productTypes = Arrays.asList("Electronic", "Books");
+        return productTypes.contains(productType);
+    }
+}
+
+
+setp 2: create Custom annotation
+
+@Target({ElementType.FIELD,ElementType.PARAMETER})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@Constraint(validatedBy = EmployeeTypeValidator.class)
+public @interface ValidateProductType {
+
+    public String message() default "Invalid productType: It should be either Electronic Or Books";
+
+    Class<?>[] groups() default {};
+
+    Class<? extends Payload>[] payload() default {};
+}
+
+
+
+//custom annotation
+    @ValidateProductType
+    private String productType; //Electronic or Books
+    
+
+
+Supporting both xml and json?
+-----------------------------
+
+	Step 1: put parser for xml
+
+	     	   <dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>
+
+	Step 2:
+	@GetMapping(path = "products", produces = {MediaType.APPLICATION_JSON_VALUE, 
+			MediaType.APPLICATION_XML_VALUE})
+
+
+
+
+richardson maturity model?
+----------------------------
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+
+
+
+Using OpenAPI 3.0?
+-------------------------
+
+=> Documenting a Spring REST API Using OpenAPI 3.0
+=>Swagger is almost equivalent to SOAP formate, used for documentation of REST api
+
+	Step 1:
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+
+	Step 2:
+
+	http://localhost:8090/bookapp/v3/api-docs
+	
+	http://localhost:8090/bookapp/swagger-ui/index.html
+
+	http://localhost:8090/bookapp/v3/api-docs.yaml
+
+
+Spring boot caching?
+-------------------
+
+schedule processes?
+------------------
+
+
+some important interview questions?
+-----------------------------------
+1: Why we should use Spring boot framework?
+2: How spring boot works?
+3: What is a Spring boot starter?
+4: What are the major starter dependencies of spring boot application?
+5: Explain @SpringBootApplication annotation
+6: What is an auto-configuration?
+7: Can you explain Component Scan in Spring Boot?
+8: Can you disable particular auto-configuration in spring boot? Explain how?
+9: What are the important annotation for Spring boot? 
+10: Is this possible to change the port of Embedded Tomcat server in Spring boot?
+11: Can we override or replace the Embedded Tomcat server in Spring Boot?
+12: Can we disable the default web server in the Spring Boot application?
+
+

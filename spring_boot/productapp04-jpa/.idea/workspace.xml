@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="143abcd4-b84a-4a24-9874-b7f33372cfc2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../springmvc/.idea/springmvc.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/jpa-buddy.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../springmvc/mvc1/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/Demo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/Hello.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/Mapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/java/com/productapp/ProductDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/01_productapp/src/test/java/com/productapp/ApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/src/main/java/com/bankapp/BankappApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../boot/bankapp/src/test/java/com/bankapp/BankappApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/Spring data.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/human ev.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/interview_questions.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/spring data is abstraction.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/config/AppConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/config/DbConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/entity/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/exceptions/ProductNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/repo/ProductRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/java/com/productapp/web/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/src/main/resources/db.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/META-INF/maven/com.productapp/02-productapp/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/META-INF/maven/com.productapp/02-productapp/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/config/AppConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/config/DbConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/entity/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/exceptions/ProductNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/repo/ProductRepo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/service/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/service/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/com/productapp/web/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../from_yt/11-productapp-spring-javaconfig-jpa-repo/target/classes/db.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2PTEga1A7SADPElRACrPihBDmRi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/raj/Documents/edu_april_may_23/spring_boot/productapp05-spring-data",
+    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Productapp01Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.productapp.Productapp01Application" />
+      <module name="productapp01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.productapp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Productapp01Application" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="143abcd4-b84a-4a24-9874-b7f33372cfc2" name="Changes" comment="" />
+      <created>1683472783262</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683472783262</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
